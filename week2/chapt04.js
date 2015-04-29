@@ -15,3 +15,15 @@ var sum = function(numArray) {
 };
 
 console.log(sum(range(1, 10)));
+
+//reverse array
+var reverseArray = function(array) {
+  var newArray = [];
+
+  for (var x = 0; x <= array.length + 1; x++) {
+    newArray[x] = array.pop();
+  }
+  return newArray;
+};
+
+console.log(reverseArray(["A", "B", "C"]));
