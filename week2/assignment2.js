@@ -31,15 +31,15 @@ var findPalindromes = function(max, min) {
   return palindromes;
 };
 
-var findProducts = function(num){
-  var num1 = 999;
+var findProducts = function(num, highestNum){
+  var highestNum = 999;
   
-  while (num % num1 > 0) {
-    num1--;
+  while (num % highestNum > 0) {
+    highestNum--;
   }
   
-  num2 = num / num1;
-  return [num1, num2];
+  num2 = num / highestNum;
+  return [highestNum, num2];
 };
 
 
@@ -47,7 +47,7 @@ var allPossib = findPalindromes(998001, 10000);
 var threeDigits = [];
 
 for (var x = 0; x < allPossib.length - 1; x++) {
-  var y = findProducts(allPossib[x]);
+  var y = findProducts(allPossib[x], 999);
   if (y[0].toString().length === 3 && y[1].toString().length === 3) {
     threeDigits.push(y);
   }

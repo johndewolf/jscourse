@@ -2,8 +2,8 @@ var evenlyDivisible = function(num, max) {
   var counter = 0;
   for (var x=1; x <= max; x++) {
     if (num % x > 0) {
-    counter += 1;
-    break;
+      counter += 1;
+      break;
     }
   }
   if (counter > 0) {
