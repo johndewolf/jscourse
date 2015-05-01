@@ -2,15 +2,15 @@
 
 var checkPalindrome = function(num) {
   var numString = num.toString();
-  var reverse = numString.length - 1;
+  var endIndex = numString.length - 1;
   var counter = 0;
   for (var x = 0; x < numString.length; x++) {
-    if (numString[x] != numString[reverse]) {
+    if (numString[x] != numString[endIndex]) {
       counter++;
       break;
     }
     else {
-      reverse--;
+      endIndex--;
     }
   }
   if (counter > 0) {
