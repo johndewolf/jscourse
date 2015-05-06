@@ -3,24 +3,15 @@
 //What is the 10 001st prime number?
 
 var checkPrime = function(num) {
-  var nonPrimesCounter = 0;
-  
-  if (num <= 3 && num >= 0) {
-    return true;
-  }
-  for (var x = 2; x < num - 1; x++) {
-    if (num % x === 0) {
-      nonPrimesCounter++;
+  var prime = true;
+
+  for (var x = 2; x < num; x++) {
+    if (num % x === 0 && x != num) {
+    	prime = false;
       break;
     }
   }
-  
-  if (nonPrimesCounter > 0) {
-    return false;
-  }
-  else {
-    return true;
-  }
+  return prime;
 };
 
 var primes = [];
