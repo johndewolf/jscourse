@@ -20,37 +20,14 @@ var checkPalindrome = function(num) {
     return true;
   }
 };
-
-var findPalindromes = function(max, min) {
-  var palindromes = [];
-  for (var x = max; x > min; x--) {
-    if (checkPalindrome(x) === true) {
-      palindromes.push(x);
+var highestNum = 0;
+for (var x = 100; x < 1000; x++) {
+  for var(y = 100; y < 1000; y++) {
+    product = x * x;
+    if (checkPalindrome(product) === true) {
+      highestNum = product;
     }
-  }
-  return palindromes;
-};
-
-var findProducts = function(num, highestNum){
-  var highestNum = 999;
-  
-  while (num % highestNum > 0) {
-    highestNum--;
-  }
-  
-  num2 = num / highestNum;
-  return [highestNum, num2];
-};
-
-
-var allPossib = findPalindromes(998001, 10000);
-var threeDigits = [];
-
-for (var x = 0; x < allPossib.length - 1; x++) {
-  var y = findProducts(allPossib[x], 999);
-  if (y[0].toString().length === 3 && y[1].toString().length === 3) {
-    threeDigits.push(y);
   }
 }
 
-console.log(threeDigits[0][0] * threeDigits[0][1]);
+console.log(product);
