@@ -1,3 +1,5 @@
+//There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+//Find the product abc.
 var answer = 0;
 for (var x = 1; x < 1000; x++) {
   for (var y = 1; y < 1000; y++){
